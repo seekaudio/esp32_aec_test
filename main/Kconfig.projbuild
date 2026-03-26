@@ -1,0 +1,10 @@
+menu "AEC Demo Configuration"
+
+    config AEC_DEMO_ENABLE_INFO_LOG
+        bool "Enable INFO and WARN logs"
+        default y
+        help
+            Enable this to print INFO and WARN level logs.
+            Disable to suppress all but ERROR logs.
+
+endmenu
