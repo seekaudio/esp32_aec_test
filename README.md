@@ -7,7 +7,6 @@ USE_SEEKAUDIO_AEC  打开宏可以用来测试seekaudio_aec回声消除技术，
 ## 编译环境要求
 
 - ESP-IDF 版本：v5.3
-- Flash 大小：8MB（如使用其他容量请修改 sdkconfig.defaults）
 
 ## 编译步骤
 
