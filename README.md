@@ -14,7 +14,7 @@ https://docs.qq.com/doc/DZVN2SGpCSnpPQ09R
 
 # esp32_aec_test
 
-这个是基于ESP32-S3-BOX-3开发板上运行回声消除aec测试程序，用来测试esp32-s3自带的aec回声消除性能，以及也可以测试seekaudio_aec的回声消除性能。通过文件seekaudio_defines.h的宏来控制测试哪个aec。seekaudio_aec的库接口文件是seekaudio_aec.h
+这个是基于ESP32-S3-BOX-3开发板上运行回声消除aec测试程序，用来测试esp32-s3自带aec和seekaudio_aec的回声消除性能。通过文件seekaudio_defines.h的宏来控制测试哪个aec。seekaudio_aec的库接口文件是seekaudio_aec.h
 
 USE_SEEKAUDIO_AEC  打开宏可以用来测试seekaudio_aec回声消除技术，关闭该宏则测试afe aec技术性能。
 
@@ -41,6 +41,7 @@ idf.py -p COM3 monitor
 ### 下面指令可以获取aec后的处理效果文件
 
 esptool.py -p COM3 -b 115200 read_flash 0x410000 0x900000 storage_dump.bin
+
 python -m littlefs extract --block-size 4096  storage_dump.bin output_dir/
 
 ### 镜像制作
